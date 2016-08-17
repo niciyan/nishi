@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:doctype_html 
+# key:doch 
+# --
+<!DOCTYPE html>
