@@ -72,3 +72,19 @@
 (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
 ;; 既存スニペットを閲覧・編集する
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+
+;;C-t change window
+(define-key global-map (kbd "C-t") 'other-window)
+
+
+;;package.el settings
+(when (require 'package nil t)
+  (add-to-list 'package-archives
+               '("marmalade" . "http://marmalade-repo.org/packages/"))
+  (add-to-list 'package-archives '("ELPA" .  "http://tromey.com/elpa/"))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (package-initialize))
+
+;;cua-mode settings
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
